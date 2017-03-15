@@ -1,0 +1,19 @@
+{
+  "name": "warmthings",
+  "version": "0.0.1",
+  "description": "medical platform for all related person.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "latest",
+    "https":"latest",
+    "http":"latest",
+    "querystring":"latest",
+    "body-parser":"latest",
+    "multer":"latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
