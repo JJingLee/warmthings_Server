@@ -1,5 +1,13 @@
-var apiMgr = reuqire('API_manager')
+var API = require('./API_global')
 
-apiMgr.HTTPModule.GET('/findExt', function(req, res){
-	console.log(req);
-});
+function user_API(req, res){
+	console.log('user api.');
+    res.send('user api.');
+    console.log(process.exit());
+}
+
+module.exports = {
+	method: 'GET',
+	route : '/user',
+	callback : user_API
+}
