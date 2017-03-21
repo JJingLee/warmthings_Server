@@ -30,6 +30,9 @@ var Get = function(route, callback){
 var routeBuilder = function(){
 	this.apis = [];
 	this.build = build;
+	this.add = function(api){
+		this.apis.push(api);
+	};
 }
 
 function build(){

@@ -2,8 +2,8 @@ var apiGlobal = require('./APIs/API_global')
 var routeBuilder = new apiGlobal.HTTPModule.RouteBuilder();
 
 //For extending api
-routeBuilder.apis.push(require('./APIs/testAPI'));
-routeBuilder.apis.push(require('./APIs/user_API'));
+routeBuilder.add(require('./APIs/testAPI'));
+routeBuilder.add(require('./APIs/user_API'));
 
 
 //build after api config completely
