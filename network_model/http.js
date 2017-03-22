@@ -43,7 +43,7 @@ function build(){
 				app.get(this.apis[idx].route, this.apis[idx].callback);
 				break;
 			case 'POST':
-				app.post(this.apis[idx].route, this.apis[idx].callback);
+				app.post(this.apis[idx].route, upload.array() , this.apis[idx].callback);
 				break;
 			case 'PUT':
 				app.put(this.apis[idx].route, this.apis[idx].callback);
