@@ -8,10 +8,18 @@ var connect_to_mysq_server = function(myHost,myUser,myPassword,myDatabase){
         password:myPassword,
         database:myDatabase
     });
+
+    this.startConnection = startConnection;
+    
     this.query = queryWithString;
+    
+    this.end = function(){
+        this.connect.end();
+    }
 };
 
-var queryWithString = function(queryString)
+
+var startConnection = function()
 {
     if (typeof this.connection === undefined)
     {
@@ -23,12 +31,16 @@ var queryWithString = function(queryString)
         if(err) throw error;
         console.log('db client success');
     });
+};
+
+var queryWithString = function(queryString, callback)
+{
     //start query
     this.connection.query(queryString+'', function(err,rows) {
         if (err) throw err;
         console.log(rows);
+        callback(rows);
     })
-    this.connection.end();
 };
 
 

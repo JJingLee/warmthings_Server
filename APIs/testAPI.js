@@ -1,15 +1,16 @@
 var APIGlobal  = require('./API_global');
-
-// exports.Test_Post = APIGlobal.HTTPModule.POST('/test',function(req, res){
-//     console.log('into test.');
-//     res.send('test received got.');
-// });
-
+var warm_CRM_DB = APIGlobal.DB.warmdb_CRM_JJTest;
 function test_post(req, res){
-	console.log('into test.');
-    res.send('test received got.');
+
+	//DB demo.
+	warm_CRM_DB.query('SELECT * FROM user_member', function(result){
+		//db query result.
+		res.send('result = ' + JSON.stringify(result,null,1));
+	});
+    
 }
 
+//http config demo, add in main.js
 module.exports = {
 	method: 'POST',
 	route: '/test',

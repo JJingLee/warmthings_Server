@@ -10,21 +10,21 @@ var httpsServer = https;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
-var Post = function(route, callback){
-    app.post(''+route, upload.array(),function(req,res){
-        console.log('post come.')
-        callback(req, res);
-    }).on('error', function(e){
-        console.log("error :"+e.message);
-    });
-};
+// var Post = function(route, callback){
+//     app.post(''+route, upload.array(),function(req,res){
+//         console.log('post come.')
+//         callback(req, res);
+//     }).on('error', function(e){
+//         console.log("error :"+e.message);
+//     });
+// };
 
-var Get = function(route, callback){
-	app.get(route, function(req, res){
-		console.log('get come');
-		callback(req, res);
-	});
-}
+// var Get = function(route, callback){
+// 	app.get(route, function(req, res){
+// 		console.log('get come');
+// 		callback(req, res);
+// 	});
+// }
 
 //For apis route
 var routeBuilder = function(){
@@ -64,8 +64,8 @@ module.exports = {
 	run:run,
 
 	//method
-	POST:Post,
-	GET:Get,
+	// POST:Post,
+	// GET:Get,
 
 	//Tool
 	RouteBuilder:routeBuilder
