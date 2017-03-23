@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 
 var Post = function(route, callback){
     app.post(''+route, upload.array(),function(req,res){
-        console.log('post come.')
+        console.log('post come.');
         callback(req, res);
     }).on('error', function(e){
         console.log("error :"+e.message);

@@ -1,4 +1,4 @@
-var con = require('./Mysql_global').MySQLConn;
+var con = require('./mysql').MySQLConn;
 const SELECT_ALL_USER= 'SELECT * from user_member'
 const SELECT_USER_BY_ID = 'SELECT * from user_member WHERE id=';
 const INSERT_USER_MEMBER = 'INSERT INTO user_member SET ?';
