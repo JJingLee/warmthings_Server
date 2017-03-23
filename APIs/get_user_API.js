@@ -5,10 +5,10 @@ function get_user(req, res){
 			req.params.userid == 'all'?'all': req.params.userid, 
 				function(err, rows){
 			if(err){
-				console.log('DB failed');
+				console.log(req.url + ': DB failed');
 				return res.send('DB failed');
 			}else{
-				console.log(rows);
+				// console.log(rows);
 				res.json(rows);
 			}
 		});
