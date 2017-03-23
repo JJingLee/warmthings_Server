@@ -12,7 +12,8 @@
     "http":"latest",
     "querystring":"latest",
     "body-parser":"latest",
-    "multer":"latest"
+    "multer":"latest",
+    "mysql":"latest"
   },
   "author": "",
   "license": "ISC"
