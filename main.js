@@ -18,7 +18,7 @@ apiGlobal.HTTPModule.run();
 // var commands = require('./APIs/developer_commands_API');
 // commands.serverReboot;
 
-//mysql query demo
+// mysql query demo
 var mysqlHandler = require('./mysql_module/mysqlHandler');
-var warmdb_CRM_DB = new mysqlHandler.connect('127.0.0.1','root','12345678','warmdb_CRM');
+var warmdb_CRM_DB = new mysqlHandler.connect('127.0.0.1','noah','Abcd1234','warmdb_CRM');
 warmdb_CRM_DB.query('SELECT * FROM user_member');

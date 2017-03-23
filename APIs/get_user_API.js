@@ -12,7 +12,11 @@ function get_user(req, res){
 				res.json(rows);
 			}
 		});
-	}
+}
+
+function isEmailValid(){
+	
+}
 
 module.exports = {
 	method: 'GET',

@@ -1,5 +1,5 @@
 var user_DAO = require('../db_model/user_DAO')
-const uuidV4 = require('uuid/v4');
+
 
 function create_user(req, res, next){
 	var userObj = req.body;
