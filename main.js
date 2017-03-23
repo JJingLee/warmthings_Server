@@ -14,16 +14,11 @@ routeBuilder.build();
 
 apiGlobal.HTTPModule.run();
 
-
-// process.on('exit', function(code) {
-// 	apiGlobal.HTTPModule.run();
-// 	console.log('run server again');
-// });
-
-
-// var test = require('./APIs/testAPI')
-// test.Test_Post;
-
 // Developer Commands
 // var commands = require('./APIs/developer_commands_API');
 // commands.serverReboot;
+
+//mysql query demo
+var mysqlHandler = require('./mysql_module/mysqlHandler');
+var warmdb_CRM_DB = new mysqlHandler.connect('127.0.0.1','root','12345678','warmdb_CRM');
+warmdb_CRM_DB.query('SELECT * FROM user_member');
